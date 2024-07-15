@@ -1,0 +1,414 @@
+body {
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Example of applying Newsreader font to titles */
+.nunito-title {
+  font-family: "nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Adjust weight as needed */
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "nunito", sans-serif;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  padding-top: 100px; /* Adjust for fixed header */
+}
+
+.intro,
+.featured-project,
+.testimonial,
+.contact,
+.image-hover {
+  margin-bottom: 40px;
+}
+
+.featured-project a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+blockquote footer {
+  text-align: right;
+  font-style: italic;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact label {
+  font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #aaa;
+}
+
+.contact button {
+  padding: 15px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #0056b3;
+}
+
+.contact-info {
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h2 {
+  margin: 10px 0;
+}
+
+.overlay p {
+  margin: 10px 0;
+}
+
+.overlay button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.overlay button:hover {
+  background-color: #0056b3;
+}
+
+.projectGrid {
+  display: grid;
+  grid-gap: 30px;
+  padding: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.gridcell1,
+.gridcell2,
+.gridcell3 {
+  position: relative;
+  overflow: hidden;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background-color: #444;
+}
+
+body.dark-mode .logo a {
+  color: #f4f4f4;
+}
+
+body.dark-mode nav ul li a {
+  color: #f4f4f4;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #007BFF;
+}
+
+body.dark-mode .featured-project a {
+  background: #444;
+}
+
+body.dark-mode blockquote {
+  background: #444;
+  border-left-color: #007BFF;
+}
+
+body.dark-mode .contact input,
+body.dark-mode .contact textarea {
+  background: #444;
+  color: #f4f4f4;
+  border: 1px solid #007BFF;
+}
+
+body.dark-mode .contact button {
+  background: #007BFF;
+}
+
+body.dark-mode footer {
+  background: #222;
+}
+
+/* Scroll Up Button */
+#scrollUpBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #007bff; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#scrollUpBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+svg,
+#rotating {
+  opacity: 0;
+  animation: rotateText 3s infinite;
+}
+
+@keyframes rotateText {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+i {
+  padding: 0 10px;
+}
+
+.square {
+  cursor: pointer;
+}
+.testimonial-carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+
+.testimonial-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.carousel-controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-controls .prev,
+.carousel-controls .next {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+@media (max-width: 1200px) {
+  nav {
+    padding: 10px;
+  }
+
+  .logo a {
+    font-size: 1.2em;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+}
